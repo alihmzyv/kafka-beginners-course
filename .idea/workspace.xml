@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8a43f5-b4c9-4d60-83e1-86a8dd8fbf6a" name="Changes" comment="producer demo with callback">
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/io/conductor/demos/kafka/consumer/ConsumerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/io/conductor/demos/kafka/consumer/ConsumerDemoWithShutDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/io/conductor/demos/kafka/producer/ProducerDemoKeys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/resources/callback-producer-with-key.log" afterDir="false" />
+    <list default="true" id="6a8a43f5-b4c9-4d60-83e1-86a8dd8fbf6a" name="Changes" comment="write producer with keys and with callbacks.&#10;write consumer.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/io/conductor/demos/kafka/producer/ProducerDemoWithCallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/io/conductor/demos/kafka/producer/ProducerDemoWithCallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/io/conductor/demos/kafka/consumer/ConsumerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/io/conductor/demos/kafka/consumer/ConsumerDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +90,7 @@
       <recent name="io.conductor.demos.kafka.producer" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ConsumerDemo">
+  <component name="RunManager" selected="Gradle.kafka-beginners-course [build]">
     <configuration name="ConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.conductor.demos.kafka.consumer.ConsumerDemo" />
       <module name="kafka-beginners-course.kafka-basics.main" />
@@ -110,19 +106,6 @@
     </configuration>
     <configuration name="ProducerDemoKeys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.conductor.demos.kafka.producer.ProducerDemoKeys" />
-      <module name="kafka-beginners-course.kafka-basics.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.conductor.demos.kafka.producer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProducerDemoWithCallBack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.conductor.demos.kafka.producer.ProducerDemoWithCallBack" />
       <module name="kafka-beginners-course.kafka-basics.main" />
       <extension name="coverage">
         <pattern>
@@ -168,13 +151,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="kafka-beginners-course [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.kafka-beginners-course [build]" />
+        <item itemvalue="Gradle.kafka-beginners-course [clean]" />
         <item itemvalue="Application.ProducerDemoKeys" />
         <item itemvalue="Application.ConsumerDemo" />
         <item itemvalue="Application.io.conductor.demos.kafka.producer.ProducerDemo" />
-        <item itemvalue="Application.ProducerDemoWithCallBack" />
-        <item itemvalue="Gradle.kafka-beginners-course [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +193,11 @@
       <workItem from="1682919361205" duration="386000" />
       <workItem from="1682920798168" duration="8040000" />
       <workItem from="1682929065153" duration="1404000" />
-      <workItem from="1682934022164" duration="2046000" />
+      <workItem from="1682934022164" duration="2725000" />
+      <workItem from="1683091146452" duration="9000" />
+      <workItem from="1683092128571" duration="89000" />
+      <workItem from="1683092269458" duration="20000" />
+      <workItem from="1683092319097" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="producer demo">
       <created>1682924128466</created>
@@ -205,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682926739386</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="write producer with keys and with callbacks.&#10;write consumer.">
+      <created>1682941703155</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682941703155</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +240,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="producer demo" />
     <MESSAGE value="producer demo with callback" />
-    <option name="LAST_COMMIT_MESSAGE" value="producer demo with callback" />
+    <MESSAGE value="write producer with keys and with callbacks.&#10;write consumer." />
+    <option name="LAST_COMMIT_MESSAGE" value="write producer with keys and with callbacks.&#10;write consumer." />
   </component>
 </project>
